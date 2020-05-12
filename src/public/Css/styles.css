@@ -20,8 +20,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: 80%;
+    width: max-content;
+    height: max-content;
     border-radius: 10px;
     background-color: #34495e;
 }
@@ -29,11 +29,18 @@
 #carta h1 {
     font-size: 3em;
     color: #fff;
+    margin-top: 1em;
+}
+
+#carta h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 20px;
 }
 
 #carta img {
-    width: 50%;
-    margin: 50px;
+    width: 100px;
+    margin: 30px;
 }
 
 form {
@@ -41,6 +48,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 form input {
@@ -80,4 +88,8 @@ form #registrar:hover {
 
 form input:focus {
     outline: none;
+}
+
+form #advert-user, #advert-password, #advert-password1, #advert-password2, #advert-email {
+    color: #e74c3c;
 }
