@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #2c3e50;
+}
+
+#carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #34495e;
+}
+
+#carta h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+#carta img {
+    width: 50%;
+    margin: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #27ae60;
+    background-color: #2ecc71;
+}
+
+form input::placeholder {
+    color: white;
+}
+
+form #registrar {
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #27ae60;
+    background-color: #2ecc71;
+}
+
+form .boton:hover {
+    cursor: pointer;
+    background-color: #7f8c8d;
+}
+
+form #registrar:hover {
+    cursor: pointer;
+    background-color: #7f8c8d;
+}
+
+form input:focus {
+    outline: none;
+}
