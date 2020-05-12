@@ -9,6 +9,7 @@ document.getElementById("registrar").addEventListener("click", (e) => {
         if(user == "") document.getElementById("advert-user").textContent = "Debes introudicir un usuario";
         if(password1 == "") document.getElementById("advert-password1").textContent = "Debes introudicir una contraseña";
         if(password2 == "") document.getElementById("advert-password2").textContent = "Debes confirmar la contraseña";
+        if(password1 != password2) document.getElementById("advert-password2").textContent = "La contraseña no coincide";
         if(email == "") document.getElementById("advert-email").textContent = "Debes introducir un email";
     }else{
         const options = {

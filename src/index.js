@@ -16,15 +16,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-    console.log(req.body)
-    const { user, pass } = req.body;
+    console.log(req.body);
+    const { user, password } = req.body;
 
     find.getUser(user)
     .then(json => {
-        console.log(json.name, json.password)
-        if(user == json.name && pass == json.password) {
+        if(user == json.name && password == json.password) {
             res.redirect(`http://localhost:${port}/Pages/success.html`);
-        }else{
+        }else if(user != json.name || password != json.password) {
             res.redirect(`http://localhost:${port}/Pages/fail.html`);
         };
     })
