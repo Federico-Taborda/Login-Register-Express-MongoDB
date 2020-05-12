@@ -12,14 +12,18 @@
     <main id="contenedor">
         <section id="carta">
             <h1>Login</h1>
-            <form action="/registro" method="POST">
-                <input type="text" placeholder="Usuario">
-                <input type="text" placeholder="Contraseña">
-                <input class="boton" type="button" value="Login">
+            <form action="/login" method="POST">
+                <input id="user" type="text" name="user" placeholder="Usuario">
+                <p id="advert-user"></p>
+
+                <input id="password" type="password" name="password" placeholder="Contraseña">
+                <p id="advert-password"></p>
+                
+                <input id="logear" class="boton" type="submit" value="Login">
                 <a href="./Pages/registrar.html" id="registrar">Registrar</a>
             </form>
         </section>
     </main>
-    <script src="Js/app.js"></script>
+    <script src="Js/login.js"></script>
 </body>
 </html>

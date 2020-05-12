@@ -13,13 +13,22 @@
         <section id="carta">
             <h1>Registrar</h1>
             <form action="/registro" method="POST">
-                <input type="text" placeholder="Usuario">
-                <input type="text" placeholder="Contraseña">
-                <input type="text" placeholder="Mail">
-                <input class="boton" type="button" value="Registrar">
+                <input id="user" type="text" name="user" placeholder="Usuario">
+                <p id="advert-user"></p>
+
+                <input id="password1" type="password" name="password" placeholder="Contraseña">
+                <p id="advert-password1"></p>
+
+                <input id="password2" type="password" placeholder="Confimar contraseña">
+                <p id="advert-password2"></p>
+
+                <input id="email" type="email" name="email" placeholder="Email">
+                <p id="advert-email"></p>
+
+                <input id="registrar" class="boton" type="submit" value="Registrar">
             </form>
         </section>
     </main>
-    <script src="Js/app.js"></script>
+    <script src="../Js/registro.js"></script>
 </body>
 </html>

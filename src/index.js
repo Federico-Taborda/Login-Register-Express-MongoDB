@@ -1,4 +1,8 @@
 const express = require("express");
+require("./connection");
+
+const find = require("./login-register/login");
+const create = require("./login-register/register");
 
 const app = express();
 const port = 3001;
@@ -11,8 +15,28 @@ app.get("/", (req, res) => {
     res.sendfile("./public/index.html");
 });
 
-app.post("/registro", (req, res) => {
+app.post("/login", (req, res) => {
+    console.log(req.body)
+    const { user, pass } = req.body;
 
+    find.getUser(user)
+    .then(json => {
+        console.log(json.name, json.password)
+        if(user == json.name && pass == json.password) {
+            res.redirect(`http://localhost:${port}/Pages/success.html`);
+        }else{
+            res.redirect(`http://localhost:${port}/Pages/fail.html`);
+        };
+    })
+});
+
+app.post("/registro", (req, res) => {
+    console.log(req.body)
+    const { user, password, email } = req.body;
+
+    create.createUser(user, password, email)
+    .then(() => console.log("Usuario creado"))
+    .then(() => res.redirect(`http://localhost:${port}/index.html`))
 });
 
 app.listen(port, () => {
