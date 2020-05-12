@@ -4,10 +4,17 @@ const userSchema = new Schema({
     name: {
         type: String,
         unique: true,
-        require: true
+        required: true
     },
-    password: String,
-    email: String
+    password: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        unique: true,
+        required: true
+    }
 });
 
 module.exports = model("User", userSchema);
