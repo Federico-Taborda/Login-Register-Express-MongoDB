@@ -11,13 +11,5 @@ document.getElementById("registrar").addEventListener("click", (e) => {
         if(password2 == "") document.getElementById("advert-password2").textContent = "Debes confirmar la contraseña";
         if(password1 != password2) document.getElementById("advert-password2").textContent = "La contraseña no coincide";
         if(email == "") document.getElementById("advert-email").textContent = "Debes introducir un email";
-    }else{
-        const options = {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({user: user, password: password1, email: email})
-        };
-    
-        fetch("/registro", options);
     };
 });

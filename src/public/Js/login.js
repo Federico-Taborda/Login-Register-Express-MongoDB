@@ -6,13 +6,5 @@ document.getElementById("logear").addEventListener("click", (e) => {
         e.preventDefault();
         if(user == "") document.getElementById("advert-user").textContent = "Debes introudicir un usuario";
         if(password == "") document.getElementById("advert-password").textContent = "Debes introudicir un password";
-    }else{
-        const options = {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({user: user, password: password})
-        };
-    
-        fetch("/login", options);
     };
 });
